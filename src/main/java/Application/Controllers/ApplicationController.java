@@ -16,9 +16,6 @@ public class ApplicationController {
 
     @PostMapping(path = "/products") // Map ONLY POST Requests
     public String createProduct(@Valid @RequestBody Product p) {
-        //p.setId(0);//este campo es auto incremental
-        //p.setName(name);
-        //p.setPrice(price);
         productRepository.save(p);
         return "Producto guardado exitosamente";
 
