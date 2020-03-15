@@ -1,0 +1,21 @@
+<h3>Crear Producto</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="product.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Precio</label>
+      <input type="text" class="form-control" id="price" required [(ngModel)]="product.price" name="price">
+    </div>    
+
+    <button type="submit" class="btn btn-success">Crear</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Producto agregado correctamente!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
